@@ -63,7 +63,6 @@ class TaskList
         if (file_exists($this->filePath)) {
             $handle = fopen($this->filePath, 'r');
 
-            // Read the headers
             $headers = fgetcsv($handle);
 
             while (($data = fgetcsv($handle)) !== false) {
